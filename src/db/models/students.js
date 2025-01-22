@@ -32,4 +32,4 @@ const studentsSchema = new Schema(
     versionKey: false,
   },
 );
-export const StudentsCollection = model('students', studentsSchema);
+export const StudentsCollection = model('student', studentsSchema);

@@ -1,6 +1,6 @@
-import { getAllStudents, getStudentById } from '../services/students';
+import { getAllStudents, getStudentById } from '../services/students.js';
 import createHttpError from 'http-errors';
-export const getStudentsController = async (req, res, next) => {
+export const createStudentController = async (req, res, next) => {
   try {
     const students = await getAllStudents();
 
