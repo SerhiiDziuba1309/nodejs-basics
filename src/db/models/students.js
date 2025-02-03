@@ -1,5 +1,3 @@
-// src/db/models/student.js
-
 import { model, Schema } from 'mongoose';
 
 const studentsSchema = new Schema(
@@ -26,10 +24,16 @@ const studentsSchema = new Schema(
       required: true,
       default: false,
     },
+    parentId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: false,
+    },
   },
   {
     timestamps: true,
     versionKey: false,
   },
 );
-export const StudentsCollection = model('student', studentsSchema);
+
+export const StudentsCollection = model('students', studentsSchema);
