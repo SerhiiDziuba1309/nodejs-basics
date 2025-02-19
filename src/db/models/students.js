@@ -29,6 +29,9 @@ const studentsSchema = new Schema(
       ref: 'User',
       required: false,
     },
+    photo: {
+      type: String
+    },
   },
   {
     timestamps: true,
